@@ -131,7 +131,7 @@ body {
 .aanbod-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 40px;
 }
 
 @media (max-width: 767px) {
