@@ -17,7 +17,11 @@
 .section .row .right {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 60px;
+}
+
+.color-blue {
+    color: var(--blue-color);
 }
 
 /* 40 - 60 */
@@ -78,8 +82,8 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
     align-items: start;
     padding: 0;
     margin: 0;
@@ -132,6 +136,12 @@
     font-size: 14px;
     color: #2a46ff;
     text-decoration: none;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 @media (max-width: 1250px) {
