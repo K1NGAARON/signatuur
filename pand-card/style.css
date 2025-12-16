@@ -33,9 +33,12 @@
 .aanbod-card .tag,
 .aanbod-card .type {
     text-transform: uppercase;
-    margin-bottom: 15px;
     font-weight: 300;
     font-size: 14px;
+}
+
+.aanbod-card .type {
+    margin-bottom: 10px;
 }
 
 .aanbod-card .description {
