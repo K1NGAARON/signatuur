@@ -1,0 +1,141 @@
+:root {
+    --pink-color: #FFDEC9;
+    --blue-color: #3B65FF;
+    --white-color: #fff;
+    --orange-color: #FE5801;
+    --yellow-color: #F5FCE2;
+}
+
+/* =========================
+   CANICULE DISPLAY
+========================= */
+
+@font-face {
+    font-family: "Canicule Display";
+    src: url("https://sgntr.be/wp-content/uploads/2025/12/CaniculeDisplayv0.4-Regular.Trial_.ttf")
+         format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Canicule Display";
+    src: url("https://sgntr.be/wp-content/uploads/2025/12/CaniculeDisplayv0.4-Bold.Trial_.ttf")
+         format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* =========================
+   SPACE GROTESK
+========================= */
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("https://sgntr.be/wp-content/uploads/2025/12/SpaceGrotesk-Light.ttf")
+         format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("https://sgntr.be/wp-content/uploads/2025/12/SpaceGrotesk-Regular.ttf")
+         format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("https://sgntr.be/wp-content/uploads/2025/12/SpaceGrotesk-Medium.ttf")
+         format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("https://sgntr.be/wp-content/uploads/2025/12/SpaceGrotesk-Bold.ttf")
+         format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Canicule Display", serif;
+}
+
+.title {
+    font-family: "Canicule Display";
+    font-weight: 400;
+}
+
+.title.bold {
+    font-weight: 700;
+}
+
+.text {
+    font-family: "Space Grotesk";
+    font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--pink-color);
+}
+
+.section {
+    display: flex;
+    max-width: none;
+    width: 100%;
+    margin: 80px auto;
+}
+
+.section .row {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    justify-content: center;
+    margin: 0px 5%;
+}
+
+.aanbod-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 767px) {
+    .aanbod-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

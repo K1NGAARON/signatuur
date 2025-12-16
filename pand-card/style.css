@@ -1,0 +1,130 @@
+.aanbod-card {
+    color: var(--blue-color);
+    display: flex;
+    flex: 0 1 500px;
+    flex-direction: column;
+    gap: 0;
+}
+
+.aanbod-card:hover .image-wrapper img {
+    transform: scale(1.05);
+}
+
+.aanbod-card .image-wrapper {
+    max-height: 350px;
+    overflow: hidden;
+}
+
+.aanbod-card .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 400ms ease-in-out;
+}
+
+.aanbod-card .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: var(--yellow-color);
+}
+
+.aanbod-card .tag,
+.aanbod-card .type {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.aanbod-card .tag {
+    margin-bottom: 60px;
+}
+
+.aanbod-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.aanbod-card .location {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.aanbod-card .price {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+
+.aanbod-card .inner-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.property-meta {
+    display: grid;
+    gap: 28px;
+}
+
+.meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.meta-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.meta-icon img,
+.meta-icon {
+    display: block;
+}
+
+.meta-text {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #2a46ff;
+    white-space: nowrap;
+}
+
+.meta-cta {
+    align-self: start;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    padding: 12px 22px;
+    border: 1px solid #2a46ff;
+    border-radius: 999px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    color: #2a46ff;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .aanbod-card  .inner-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+        .meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .meta-text {
+        white-space: normal;
+    }
+}
