@@ -55,12 +55,16 @@
 
 
 .title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 5px;
 }
 
-.location {
+.title.intro {
     font-size: 1.5rem;
+}
+
+.location {
+    font-size: 2rem;
     margin-bottom: 15px;
 }
 
@@ -83,7 +87,7 @@
 .grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 20px;
+    gap: 40px;
     align-items: start;
     padding: 0;
     margin: 0;
