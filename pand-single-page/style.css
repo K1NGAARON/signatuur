@@ -1,0 +1,155 @@
+.section.hero {
+    background-image: url('/pand-single-page/img/hero.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+}
+
+.section .row {
+    display: grid;
+    gap: 48px;
+    align-items: start;
+}
+
+/* 40 - 60 */
+.section.ratio-40-60 .row {
+    grid-template-columns: 2fr 3fr;
+}
+
+/* 60 - 40 */
+.section.ratio-60-40 .row {
+    grid-template-columns: 3fr 2fr;
+}
+
+.tag,
+.type {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.type {
+    margin-bottom: 10px;
+}
+
+.description {
+    font-weight: 300;
+}
+
+.tag {
+    margin-bottom: 60px;
+}
+
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.location {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.inner-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.property-meta {
+    display: grid;
+    gap: 28px;
+}
+
+.meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.meta-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.meta-icon img,
+.meta-icon {
+    display: block;
+}
+
+.meta-text {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #2a46ff;
+    white-space: nowrap;
+}
+
+.meta-cta {
+    align-self: start;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    padding: 12px 22px;
+    border: 1px solid #2a46ff;
+    border-radius: 999px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    color: #2a46ff;
+    text-decoration: none;
+}
+
+@media (max-width: 1250px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .inner-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .meta-text {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 560px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .section .row {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
