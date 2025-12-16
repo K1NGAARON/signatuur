@@ -66,6 +66,22 @@
     margin-bottom: 60px;
 }
 
+.aanbod-card .tag-wrapper .sold {
+    display: none;
+}
+
+.aanbod-card .tag-wrapper .available {
+    display: flex;
+}
+
+.aanbod-card.is-sold .tag-wrapper .available {
+    display: none;
+}
+
+.aanbod-card.is-sold .tag-wrapper .sold {
+    display: flex;
+}
+
 .aanbod-card h3 {
     font-size: 2.5rem;
     margin-bottom: 5px;
