@@ -12,14 +12,12 @@
     justify-content: center;
 }
 
-/* Tekst */
 .button-cta-text {
     position: relative;
     z-index: 2;
     transition: color 0.4s ease;
 }
 
-/* Zwarte fill */
 .button-cta .fill-container {
     position: absolute;
     inset: 0;
@@ -33,11 +31,19 @@
     z-index: 1;
 }
 
-/* Hover state */
 .button-cta:hover .fill-container {
     transform: scaleY(1);
 }
 
 .button-cta:hover .button-cta-text {
     color: #fff;
+}
+
+.button-cta.orange-btn {
+    color: var(--orange-color);
+    border-color: var(--orange-color);
+}
+
+.button-cta.orange-btn .fill-container {
+    background: var(--orange-color);
 }

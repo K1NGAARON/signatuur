@@ -10,6 +10,19 @@
     flex-direction: column-reverse;
 }
 
+.aanbod-card.cta-card {
+    color: var(--orange-color);
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 30px;
+}
+
+.aanbod-card.cta-card .inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .aanbod-card:hover .image-wrapper img {
     transform: scale(1.05);
 }
@@ -67,7 +80,6 @@
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
-
 
 .aanbod-card .inner-wrapper {
     display: grid;
