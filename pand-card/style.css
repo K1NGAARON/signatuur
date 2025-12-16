@@ -7,7 +7,6 @@
 }
 
 .aanbod-card:nth-child(even) {
-    display: flex;
     flex-direction: column-reverse;
 }
 
@@ -129,7 +128,13 @@
     text-decoration: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 560px) {
+    .aanbod-card:nth-child(even) {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
     .aanbod-card  .inner-wrapper {
         grid-template-columns: 1fr;
     }
