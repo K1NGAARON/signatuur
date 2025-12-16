@@ -1,0 +1,43 @@
+.button-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 16px 36px;
+    border: 2px solid #000;
+    border-radius: 999px;
+    background: transparent;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tekst */
+.button-cta-text {
+    position: relative;
+    z-index: 2;
+    transition: color 0.4s ease;
+}
+
+/* Zwarte fill */
+.button-cta .fill-container {
+    position: absolute;
+    inset: 0;
+    background: var(--blue-color);
+    border-radius: inherit;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+    z-index: 1;
+}
+
+/* Hover state */
+.button-cta:hover .fill-container {
+    transform: scaleX(1);
+}
+
+.button-cta:hover .button-cta-text {
+    color: #fff;
+}
