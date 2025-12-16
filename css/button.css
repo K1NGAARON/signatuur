@@ -26,8 +26,8 @@
     background: var(--blue-color);
     border-radius: inherit;
 
-    transform: scaleX(0);
-    transform-origin: left;
+    transform: scaleY(0);
+    transform-origin: top;
     transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 
     z-index: 1;
@@ -35,7 +35,7 @@
 
 /* Hover state */
 .button-cta:hover .fill-container {
-    transform: scaleX(1);
+    transform: scaleY(1);
 }
 
 .button-cta:hover .button-cta-text {
