@@ -238,6 +238,37 @@
     background: #e25e33;
 }
 
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 1px solid var(--orange-color);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-icon img {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+/* optioneel hover */
+.social-icon:hover {
+    transform: translateY(-1px);
+    background: rgba(242, 106, 61, 0.08);
+}
+
 @media (max-width: 1250px) {
     .title {
         font-size: 1.5rem;
