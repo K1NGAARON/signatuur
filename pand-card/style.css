@@ -1,7 +1,6 @@
 .aanbod-card {
     color: var(--blue-color);
     display: flex;
-    flex: 0 1 500px;
     flex-direction: column;
     gap: 0;
 }
@@ -165,6 +164,14 @@
 @media (max-width: 560px) {
     .aanbod-card:nth-child(even) {
         flex-direction: column;
+    }
+
+    .aanbod-card .image-wrapper {
+        max-height: 300px;   
+    }
+    
+    .aanbod-card .content-wrapper {
+        padding: 30px;
     }
 
     .aanbod-card h3 {
