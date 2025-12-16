@@ -6,6 +6,11 @@
     gap: 0;
 }
 
+.aanbod-card:nth-child(even) {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .aanbod-card:hover .image-wrapper img {
     transform: scale(1.05);
 }
