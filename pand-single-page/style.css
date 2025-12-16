@@ -10,18 +10,24 @@
 
 .section .row {
     display: grid;
-    gap: 48px;
+    gap: 20px;
     align-items: start;
+}
+
+.section .row .right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 /* 40 - 60 */
 .section.ratio-40-60 .row {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 4fr;
 }
 
 /* 60 - 40 */
 .section.ratio-60-40 .row {
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 4fr 2fr;
 }
 
 .tag,
@@ -82,7 +88,7 @@
 .meta-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 20px;
     align-items: start;
     padding: 0;
     margin: 0;
@@ -160,6 +166,6 @@
 @media (max-width: 900px) {
     .section .row {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 20px;
     }
 }
