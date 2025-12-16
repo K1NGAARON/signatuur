@@ -129,6 +129,17 @@
     display: block;
 }
 
+.info-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    width: fit-content;
+    color: var(--blue-color);
+    background-color: var(--yellow-color);
+    border-radius: 0;
+    padding: 6px 12px;
+    margin-bottom: 20px;
+}
+
 .meta-text {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
