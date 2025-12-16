@@ -26,7 +26,7 @@
 .aanbod-card .content-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 60px 30px;
     background-color: var(--yellow-color);
 }
 
