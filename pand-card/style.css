@@ -29,6 +29,7 @@
 .aanbod-card .image-wrapper {
     max-height: 350px;
     overflow: hidden;
+    position: relative;
 }
 
 .aanbod-card .image-wrapper img {
@@ -137,6 +138,45 @@
     font-size: 14px;
     color: #2a46ff;
     text-decoration: none;
+}
+
+
+/* IS SOLD */
+/* image dimmen bij verkocht */
+.card.is-sold .image-wrapper img {
+    opacity: 0.35;
+    filter: grayscale(100%);
+}
+
+/* overlay tekst */
+.card .sold-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    font-size: 3em;
+    font-weight: 700;
+    color: #2f55ff;
+
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(2px);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.card.is-sold .sold-overlay {
+    opacity: 1;
+}
+
+.card.is-sold .price {
+    text-decoration: line-through;
+    opacity: 0.5;
 }
 
 @media (max-width: 1250px) {
