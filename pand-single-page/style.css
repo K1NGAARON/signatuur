@@ -10,7 +10,7 @@
 
 .section .row {
     display: grid;
-    gap: 20px;
+    gap: 60px;
     align-items: start;
 }
 
@@ -299,16 +299,22 @@
 
 .voorzieningen-wrapper {
     background: var(--yellow-color);
-    width: fit-content;
-    min-width: 900px;
+    width: 100%;
     padding: 40px 60px;
+    box-sizing: border-box;
 }
 
+/* Tabs layout (desktop) */
 .tabs {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
     gap: 48px;
     align-items: start;
+}
+
+/* Belangrijk: laat grid children kunnen krimpen (voorkomt overflow + rare line breaks) */
+.tabs > * {
+    min-width: 0;
 }
 
 .tabs-nav {
@@ -317,6 +323,7 @@
     gap: 22px;
     padding-right: 32px;
     border-right: 2px solid var(--blue-color); /* blauwe lijn */
+    box-sizing: border-box;
 }
 
 .tab {
@@ -337,14 +344,58 @@
 
 .tabs-content {
     color: var(--blue-color);
+    min-width: 0;
+    overflow-wrap: anywhere; /* voorkomt verticale letter-stapeling bij lange strings */
+    word-break: normal;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .voorzieningen-wrapper {
+        padding: 24px;
+    }
+
+    .tabs {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* Nav wordt horizontaal scrollbaar (handig bij veel tabs) */
+    .tabs-nav {
+        flex-direction: row;
+        gap: 14px;
+
+        padding-right: 0;
+        padding-bottom: 14px;
+
+        border-right: 0;
+        border-bottom: 2px solid var(--blue-color);
+
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+
+    .tab {
+        flex: 0 0 auto;
+    }
 }
 
 .spec-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  gap: 14px;
+
+  /* responsive columns */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* belangrijk: laat items kunnen krimpen */
+.spec-list > * {
+  min-width: 0;
 }
 
 .spec-list li {
@@ -383,6 +434,14 @@
     }
 }
 
+@media (max-width: 1300px) {
+    .spec-list li {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
 @media (max-width: 1250px) {
     .title {
         font-size: 1.5rem;
@@ -396,9 +455,9 @@
 }
 
 @media (max-width: 768px) {
-    .meta-grid {
+    /* .meta-grid {
         grid-template-columns: 1fr;
-    }
+    } */
 
     .meta-text {
         white-space: normal;
@@ -408,6 +467,10 @@
 @media (max-width: 560px) {
     .title {
         font-size: 2.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
     }
 }
 
