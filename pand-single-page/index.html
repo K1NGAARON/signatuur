@@ -115,10 +115,71 @@
     </div>
 </div>
 
-<div class="section ratio-70-30">
+<div class="section ratio-60-40">
     <div class="row">   
         <div class="left">
+            <div class="voorzieningen-wrapper">
+                <div class="tabs" data-tabs>
+                    <div class="tabs-nav" role="tablist" aria-label="Voorzieningen">
+                    <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-algemeen" id="tab-algemeen">
+                        Algemeen
+                    </button>
+                    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-indeling" id="tab-indeling">
+                        Indeling
+                    </button>
+                    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-comfort" id="tab-comfort">
+                        Comfort
+                    </button>
+                    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-wettelijk" id="tab-wettelijk">
+                        Wettelijke gegevens
+                    </button>
+                    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-financiering" id="tab-financiering">
+                        Financiering
+                    </button>
+                    </div>
 
+                    <div class="tabs-content">
+                    <div class="tab-panel is-active" role="tabpanel" id="panel-algemeen" aria-labelledby="tab-algemeen">
+                        <ul class="spec-list">
+                        <li><span>Niet geïndexeerd K.I.:</span> <strong>€ 1.130</strong></li>
+                        <li><span>Kadastrale benaming:</span> <strong>vierde afdeling sectie A</strong></li>
+                        <li><span>Kadastrale Nummers:</span> <strong>28F4</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-panel" role="tabpanel" id="panel-indeling" aria-labelledby="tab-indeling" hidden>
+                        <ul class="spec-list">
+                        <li><span>Slaapkamers:</span> <strong>3</strong></li>
+                        <li><span>Badkamers:</span> <strong>2</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-panel" role="tabpanel" id="panel-comfort" aria-labelledby="tab-comfort" hidden>
+                        <ul class="spec-list">
+                        <li><span>Keuken:</span> <strong>volledig uitgerust</strong></li>
+                        <li><span>Verwarming:</span> <strong>...</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-panel" role="tabpanel" id="panel-wettelijk" aria-labelledby="tab-wettelijk" hidden>
+                        <ul class="spec-list">
+                        <li><span>EPC Certificaat Nr.:</span> <strong>20220316-0002564716-RES-1</strong></li>
+                        <li><span>EPC Index:</span> <strong>375,00 kWh/(m² jaar)</strong></li>
+                        <li><span>Energielabel:</span> <strong>D</strong></li>
+                        <li><span>EPC Geldig tot:</span> <strong>16/03/2032</strong></li>
+                        <li><span>Stedenbouwkundige vergunning:</span> <strong>Ja</strong></li>
+                        <li><span>Voorkooprecht:</span> <strong>Neen</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-panel" role="tabpanel" id="panel-financiering" aria-labelledby="tab-financiering" hidden>
+                        <ul class="spec-list">
+                        <li><span>Extra info:</span> <strong>...</strong></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="right gap-20 color-orange">
             <h2 class="title">
@@ -166,5 +227,7 @@
     </div>
 </div>
     
+
+    <script src="/pand-single-page/js/tabs.js"></script>
 </body>
 </html>
