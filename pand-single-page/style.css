@@ -394,7 +394,6 @@
     font-weight: 600;
 }
 
-/* mobile */
 @media (max-width: 900px) {
     tabs {
         grid-template-columns: 1fr;
@@ -460,7 +459,6 @@
     }
 }
 
-/* Mobile */
 @media (max-width: 900px) {
     .section .row {
         grid-template-columns: 1fr;
