@@ -125,7 +125,8 @@ body {
     width: 100%;
     max-width: 1440px;
     justify-content: center;
-    margin: 0px 5%;
+    margin: 0px auto;
+    padding: 0 5%;
 }
 
 .aanbod-wrapper {
