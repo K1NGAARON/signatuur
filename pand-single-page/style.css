@@ -32,35 +32,18 @@
     color: var(--orange-color);
 }
 
-/* .section.ratio-40-60 .row {
-    grid-template-columns: 2fr 4fr;
-}
-
-.section.ratio-60-40 .row {
-    grid-template-columns: 4fr 2fr;
-}
-
-
-.section.ratio-70-30 .row {
-    grid-template-columns: 4fr 1fr;
-} */
-
-/* 40 - 60 */
 .section.ratio-40-60 .row{
   grid-template-columns: minmax(0, 2fr) minmax(0, 4fr);
 }
 
-/* 60 - 40 */
 .section.ratio-60-40 .row{
   grid-template-columns: minmax(0, 4fr) minmax(0, 2fr);
 }
 
-/* 70 - 30 */
 .section.ratio-70-30 .row{
   grid-template-columns: minmax(0, 4fr) minmax(0, 1fr);
 }
 
-/* Vanaf tablet en kleiner -> stacken naar 1 kolom */
 @media (max-width: 992px){
   .section.ratio-40-60 .row,
   .section.ratio-60-40 .row,
@@ -69,10 +52,9 @@
   }
 }
 
-/* Extra overflow-veiligheid voor grid children */
 .section .row > *{
-  min-width: 0;          /* super belangrijk in grid/flex */
-  overflow-wrap: anywhere; /* lange strings/urls breken */
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .tag,
@@ -198,7 +180,7 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 1.2;
-    color: #2a46ff;
+    color: var(--blue-color);
     white-space: nowrap;
 }
 
@@ -208,11 +190,11 @@
     width: fit-content;
     align-items: center;
     padding: 6px 12px;
-    border: 2px solid #2a46ff;
+    border: 2px solid var(--blue-color);
     border-radius: 999px;
     font-family: "Space Grotesk", sans-serif;
     font-size: 14px;
-    color: #2a46ff;
+    color: var(--blue-color);
     text-decoration: none;
 }
 
