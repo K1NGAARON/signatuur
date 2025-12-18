@@ -214,11 +214,11 @@
 .newsletter-form input {
     padding: 12px 18px;
     border-radius: 999px;
-    border: 2px solid #f26a3d;
+    border: 2px solid var(--orange-color);
     background: transparent;
 
     font-size: 0.95rem;
-    color: #f26a3d;
+    color: var(--orange-color);
 
     outline: none;
     min-width: 220px;
@@ -226,7 +226,7 @@
 
 /* Placeholder kleur */
 .newsletter-form input::placeholder {
-    color: #f26a3d;
+    color: var(--orange-color);
     opacity: 0.8;
 }
 
@@ -236,8 +236,8 @@
     border-radius: 999px;
     border: none;
 
-    background: #f26a3d;
-    color: #fff;
+    background: var(--orange-color);
+    color: var(--white-color);
     font-weight: 600;
     cursor: pointer;
 
@@ -245,7 +245,7 @@
 }
 
 .newsletter-form button:hover {
-    background: #e25e33;
+    background: var(--orange-color);
 }
 
 .icon-wrapper {
@@ -403,7 +403,7 @@
 
     .tabs-nav {
         border-right: 0;
-        border-bottom: 2px solid #2f55ff;
+        border-bottom: 2px solid var(--blue-color);
         padding-right: 0;
         padding-bottom: 18px;
         flex-direction: row;
