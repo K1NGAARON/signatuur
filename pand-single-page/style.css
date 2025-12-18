@@ -455,9 +455,9 @@
 }
 
 @media (max-width: 768px) {
-    /* .meta-grid {
+    .meta-grid {
         grid-template-columns: 1fr;
-    } */
+    }
 
     .meta-text {
         white-space: normal;
@@ -471,6 +471,10 @@
 
     .grid {
         grid-template-columns: 1fr;
+    }
+
+        .meta-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
