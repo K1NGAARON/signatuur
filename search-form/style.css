@@ -1,6 +1,7 @@
 .search-form-wrapper {
     display: grid;
     grid-template-columns: 2fr 2fr;
+    margin-bottom: 40px;
 }
 
 .search-form-wrapper .item {
@@ -32,4 +33,8 @@
     border: 2px solid var(--orange-color);
     background-color: var(--orange-color);
     width: fit-content;
+}
+
+@media (max-width: 560px) {
+
 }
