@@ -4,13 +4,32 @@
 }
 
 .search-form-wrapper .item {
-
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.search-form-wrapper input {
+.search-form-wrapper .item .form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
+.search-form-wrapper label {
+    color: var(--orange-color);
+}
+
+.search-form-wrapper select {
+    color: var(--orange-color);
+    border-radius: 999px;
+    border: 2px solid var(--orange-color);
+    background-color: transparent;
 }
 
 .search-form-wrapper .submit-btn {
-    
+    color: var(--white-color);
+    border-radius: 999px;
+    border: 2px solid var(--orange-color);
+    background-color: var(--orange-color);
+    width: fit-content;
 }

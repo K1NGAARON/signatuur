@@ -9,44 +9,50 @@ add_shortcode('skarabee_search_form', function() {
     ?>
     <form method="GET" class="skarabee-search-form search-form-wrapper" action="<?php echo esc_url($action_url); ?>">
         <div class="item">
-            <label>Ik wil...</label>
-            <select name="status">
-                <option value="">Any</option>
-                <option value="FOR_SALE">Kopen</option>
-                <option value="FOR_RENT">Huren</option>
-            </select>
+            <div class="form-item">
+                <label>Ik wil...</label>
+                <select name="status">
+                    <option value="">Any</option>
+                    <option value="FOR_SALE">Kopen</option>
+                    <option value="FOR_RENT">Huren</option>
+                </select>
+            </div>
 
-            <label>Regio:</label>
-            <select name="city">
-                <option value="">Alle</option>
-                <?php foreach ($cities as $c): ?>
-                    <option value="<?php echo esc_attr($c); ?>">
-                        <?php echo esc_html($c); ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
+            <div class="form-item">
+                <label>Regio:</label>
+                <select name="city">
+                    <option value="">Alle</option>
+                    <?php foreach ($cities as $c): ?>
+                        <option value="<?php echo esc_attr($c); ?>">
+                            <?php echo esc_html($c); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
         </div>
 
         <div class="item">
-            <label>Ik zoek...</label>
-            <select name="type">
+            <div class="form-item">
+                <label>Ik zoek...</label>
+                <select name="type">
 
-                <?php foreach (skarabee_simplified_type_groups() as $key => $group): ?>
-                    <option value="<?php echo esc_attr($key); ?>">
-                        <?php echo esc_html($group['label']); ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
+                    <?php foreach (skarabee_simplified_type_groups() as $key => $group): ?>
+                        <option value="<?php echo esc_attr($key); ?>">
+                            <?php echo esc_html($group['label']); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
 
-            <select name="bedrooms">
-                <option value="">0+ Slaapkamers</option>
-                <option value="1">1+ Slaapkamers</option>
-                <option value="2">2+ Slaapkamers</option>
-                <option value="3">3+ Slaapkamers</option>
-                <option value="4">4+ Slaapkamers</option>
-            </select>
+                <select name="bedrooms">
+                    <option value="">0+ Slaapkamers</option>
+                    <option value="1">1+ Slaapkamers</option>
+                    <option value="2">2+ Slaapkamers</option>
+                    <option value="3">3+ Slaapkamers</option>
+                    <option value="4">4+ Slaapkamers</option>
+                </select>
+            </div>
 
-            <button class="submit-btn" type="submit">Zoeken</button>
+        <button class="submit-btn" type="submit">Zoeken</button>
         </div>
     </form>
     <?php
