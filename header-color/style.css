@@ -14,10 +14,6 @@ body.header-theme--white  { --header-fg: #ffffff; }
   fill: currentColor;
 }
 
-/* ========== LOGO SWAP (aanrader) ========== */
-/* Plaats 3 logo’s in je header en geef ze deze classes:
-   logo--blue, logo--orange, logo--white
-*/
 .logo--blue, .logo--orange, .logo--white { display: none; }
 
 body.header-theme--blue   .logo--blue   { display: block; }
