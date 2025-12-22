@@ -1,0 +1,16 @@
+.search-form-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.search-form-wrapper .item {
+
+}
+
+.search-form-wrapper input {
+
+}
+
+.search-form-wrapper .submit-btn {
+    
+}
