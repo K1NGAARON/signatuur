@@ -1,12 +1,6 @@
 (function () {
-  console.log('[header-theme] script loaded');
-
-  const header = document.querySelector('.header');
-  if (!header) {
-    console.warn('[header-theme] ❌ .header NOT found');
-    return;
-  }
-  console.log('[header-theme] ✅ header found', header);
+const DESKTOP_MIN = 601; // >600px = desktop
+  const mq = window.matchMedia(`(min-width: ${DESKTOP_MIN}px)`);
 
   const THEMES = [
     { cls: 'blue-header-color', theme: 'blue' },
@@ -14,24 +8,25 @@
     { cls: 'white-header-color', theme: 'white' },
   ];
 
-  const sections = THEMES.flatMap(t =>
-    Array.from(document.querySelectorAll('.' + t.cls))
-      .map(el => ({ el, theme: t.theme }))
-  );
+  let observer = null;
+  let header = null;
+  let sections = [];
 
-  if (!sections.length) {
-    console.warn('[header-theme] ❌ No sections found with theme classes');
-    return;
-  }
+  const cleanup = () => {
+    if (observer) {
+      observer.disconnect();
+      observer = null;
+    }
 
-  console.log(
-    '[header-theme] ✅ themed sections found:',
-    sections.map(s => ({ theme: s.theme, el: s.el }))
-  );
+    // Optional: reset classes when leaving desktop
+    document.body.classList.remove(
+      'header-theme--blue',
+      'header-theme--orange',
+      'header-theme--white'
+    );
+  };
 
   const setTheme = (theme) => {
-    console.log('[header-theme] 🎨 setting theme →', theme);
-
     document.body.classList.remove(
       'header-theme--blue',
       'header-theme--orange',
@@ -40,28 +35,49 @@
     document.body.classList.add('header-theme--' + theme);
   };
 
-  // Default theme
-  setTheme('blue');
-
   const getHeaderHeight = () => {
-    const h = Math.ceil(header.getBoundingClientRect().height || 0);
-    console.log('[header-theme] header height =', h);
+    const h = Math.ceil(header?.getBoundingClientRect().height || 0);
     return h;
   };
 
-  let observer = null;
-
   const initObserver = () => {
-    if (observer) {
-      console.log('[header-theme] 🔄 reinitializing observer');
-      observer.disconnect();
+    // ✅ guard: only run on desktop
+    if (!mq.matches) {
+      cleanup();
+      return;
     }
+
+    header = document.querySelector('.header');
+    if (!header) {
+      cleanup();
+      return;
+    }
+
+    sections = THEMES.flatMap(t =>
+      Array.from(document.querySelectorAll('.' + t.cls))
+        .map(el => ({ el, theme: t.theme }))
+    );
+
+    if (!sections.length) {
+      cleanup();
+      return;
+    }
+
+    console.log(
+      '[header-theme] ✅ themed sections found:',
+      sections.map(s => ({ theme: s.theme, el: s.el }))
+    );
+
+    // Default theme on desktop
+    setTheme('blue');
 
     const headerHeight = getHeaderHeight();
 
-    observer = new IntersectionObserver((entries) => {
-      console.log('[header-theme] 👀 observer entries:', entries.length);
+    if (observer) {
+      observer.disconnect();
+    }
 
+    observer = new IntersectionObserver((entries) => {
       const active = entries
         .filter(e => e.isIntersecting)
         .map(e => {
@@ -82,7 +98,6 @@
         .filter(Boolean);
 
       if (!active.length) {
-        console.log('[header-theme] ⚠️ no active themed sections');
         return;
       }
 
@@ -92,7 +107,6 @@
           Math.abs(b.top - headerHeight)
       );
 
-      console.log('[header-theme] 🏆 chosen theme:', active[0].theme);
       setTheme(active[0].theme);
 
     }, {
@@ -103,15 +117,26 @@
 
     sections.forEach(s => {
       observer.observe(s.el);
-      console.log('[header-theme] 👁 observing section:', s.theme, s.el);
     });
   };
 
+  // Init once
   initObserver();
 
+  // Re-init on desktop resize (still guarded)
   window.addEventListener('resize', () => {
-    console.log('[header-theme] 📐 resize detected');
     initObserver();
   }, { passive: true });
 
+  // ✅ Also react instantly when crossing breakpoint (desktop <-> mobile)
+  if (mq.addEventListener) {
+    mq.addEventListener('change', () => {
+      initObserver();
+    });
+  } else {
+    // Safari older fallback
+    mq.addListener(() => {
+      initObserver();
+    });
+  }
 })();

@@ -9,9 +9,14 @@ body.header-theme--white  { --header-fg: #ffffff; }
 .header .elementor-icon,
 .header svg,
 .header svg path,
-.header .elementor-nav-menu--main .elementor-item {
-  color: var(--header-fg);
-  fill: currentColor;
+.header .elementor-nav-menu--main .elementor-item,
+.header polygon {
+  color: var(--header-fg)!important;
+  fill: currentColor!important;
+}
+
+.header .has-border {
+  border-color: var(--header-fg)!important;
 }
 
 .logo--blue, .logo--orange, .logo--white { display: none; }
