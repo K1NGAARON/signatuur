@@ -16,12 +16,24 @@
     gap: 10px;
 }
 
+.booking-form-wrapper .wrapper .item .flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.booking-form-wrapper .wrapper .item label {
+    font-weight: 500;
+    color: var(--orange-color);
+}
+
 .booking-form-wrapper .wrapper .item.full {
     flex: 1 0;
 }
 
 .booking-form-wrapper .wrapper .item input,
-.booking-form-wrapper .wrapper .item textarea {
+.booking-form-wrapper .wrapper .item textarea,
+.booking-form-wrapper .wrapper .item select {
     color: var(--orange-color);
     border-radius: 999px;
     border: 2px solid var(--orange-color);

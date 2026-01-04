@@ -19,6 +19,39 @@
                 <input name="phone" type="tel" placeholder="Telefoonnummer">
             </div>
         </div>
+
+        <div class="wrapper">
+            <div class="item">
+                <label>Voorkeursmoment 1</label>
+                <div class="flex-row">
+                    <input type="date" name="preferred_date_1">
+
+                    <select name="preferred_time_1">
+                        <option value="">Geen voorkeur</option>
+                        <option value="09:00 - 12:00">09:00 - 12:00</option>
+                        <option value="12:00 - 17:00">12:00 - 17:00</option>
+                        <option value="17:00 - 20:00">17:00 - 20:00</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="item">
+                <label>Voorkeursmoment 2</label>
+                <div class="flex-row">
+                    <input type="date" name="preferred_date_2">
+
+                    <select name="preferred_time_2">
+                        <option value="">Geen voorkeur</option>
+                        <option value="09:00 - 12:00">09:00 - 12:00</option>
+                        <option value="12:00 - 17:00">12:00 - 17:00</option>
+                        <option value="17:00 - 20:00">17:00 - 20:00</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
         <div class="wrapper">
             <div class="item full">
                 <textarea name="comments" placeholder="Bericht"></textarea>
