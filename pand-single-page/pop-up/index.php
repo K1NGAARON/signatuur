@@ -12,10 +12,10 @@
         <div class="wrapper">
             <div class="item">
                 <input name="first_name" placeholder="Voornaam" required>
-                <input name="last_name" placeholder="Achternaam" required>
+                <input name="email" type="email" placeholder="E-mail" required>
             </div>
             <div class="item">
-                <input name="email" type="email" placeholder="E-mail" required>
+                <input name="last_name" placeholder="Achternaam" required>
                 <input name="phone" type="tel" placeholder="Telefoonnummer">
             </div>
         </div>
