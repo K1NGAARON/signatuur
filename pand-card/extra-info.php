@@ -73,15 +73,15 @@ function get_extra_info_panel($publication) {
   $energyCertificateNr = 'onbekend';
   $energyClass = 'onbekend';
   $energyClassEndDate = 'onbekend';
-
+  $energyIndex = 'onbekend';
 
   // if it has no index I assume no energy certificate
-  if ($property->Energy->Index) {
-    $energyCertificateNr = $property->Energy->EnergyCertificateNr;
-    $energyClass = $property->Energy->Class;
-    $energyClassEndDate = $property->Energy->ClassEndDate;
+  if (isset($property->Energy->Index)) {
+    $energyCertificateNr = $property->Energy->EnergyCertificateNr ?? 'onbekend';
+    $energyClass = $property->Energy->Class ?? 'onbekend';
+    $energyClassEndDate = $property->Energy->ClassEndDate ?? 'onbekend';
+    $energyIndex = $property->Energy->Index;
   }
-  $energyIndexYearlyTotal = $property->EnergyIndexYearlyTotal ?? 'onbekend';
 
   $environmentalPlanning = $property->EnvironmentalPlanning ?? 'onbekend';
   ob_start();
@@ -137,7 +137,7 @@ function get_extra_info_panel($publication) {
               <div class="tab-panel" role="tabpanel" id="panel-wettelijk" aria-labelledby="tab-wettelijk" hidden>
                   <ul class="spec-list">
                       <li><span>EPC Certificaat Nr.:</span> <strong><?php echo esc_html($energyCertificateNr); ?></strong></li>
-                      <li><span>EPC Index:</span> <strong><?php echo esc_html($energyIndexYearlyTotal); ?> kWh/(m² jaar)</strong></li>
+                      <li><span>EPC Index:</span> <strong><?php echo esc_html($energyIndex); ?> kWh/(m² jaar)</strong></li>
                       <li><span>Energielabel:</span> <strong><?php echo esc_html($energyClass); ?></strong></li>
                       <li><span>EPC Geldig tot:</span> <strong><?php echo esc_html($energyClassEndDate); ?></strong></li>
                   </ul>
